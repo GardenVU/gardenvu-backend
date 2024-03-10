@@ -72,7 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 header('Content-Type: application/json');
                 echo $jsonData;
             } else {
-                echo "No data found.";
+                // Return empty json array if no data found
+                $jsonData = json_encode([]);
+
+                // Output the JSON data
+                header('Content-Type: application/json');
+                echo $jsonData;
             }
 
             // Close the result
