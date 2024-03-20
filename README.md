@@ -43,7 +43,7 @@ Clone the GardenVU back-end repository to your local machine.
 ### Step 6: Prepare WAMP Server Directory
 
 1. Create a new folder named `gardenvu` in `C:\wamp64\www`.
-2. Copy all files from the `php` folder into `C:\wamp64\www\gardenvu`.
+2. Copy all files from the `php\localhost` folder into `C:\wamp64\www\gardenvu`.
 
 ### Step 7: Configure Database in PHP
 
