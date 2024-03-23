@@ -13,7 +13,6 @@ CREATE TABLE IF NOT EXISTS sensor_data (
   temperature DECIMAL(5, 2) NOT NULL,
   pH DECIMAL(5, 2) NOT NULL,
   tds DECIMAL(5, 2) NOT NULL,
-  waterLevel DECIMAL(5, 2) NOT NULL,
   time_collected TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (plot_id) REFERENCES plot_information(id)
 );

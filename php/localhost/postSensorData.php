@@ -11,13 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $temperature = isset($_POST['temperature']) ? $_POST['temperature'] : null;
     $pH = isset($_POST['pH']) ? $_POST['pH'] : null;
     $tds = isset($_POST['tds']) ? $_POST['tds'] : null;
-    $waterLevel = isset($_POST['water_level']) ? $_POST['water_level'] : null;
     $timestamp = date('Y-m-d H:i:s');
 
     // Prepare SQL statement to insert data
-    $sql = "INSERT INTO sensor_data (temperature, pH, tds, water_level, timestamp) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO sensor_data (temperature, pH, tds, timestamp) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("dddds", $temperature, $pH, $tds, $waterLevel, $timestamp);
+    $stmt->bind_param("dddds", $temperature, $pH, $tds, $timestamp);
 
     // Execute the statement
     if ($stmt->execute()) {

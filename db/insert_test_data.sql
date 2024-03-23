@@ -24,8 +24,8 @@ BEGIN
     SET i = 1;
     WHILE i <= plot_count DO
         WHILE j < 10 DO
-            INSERT INTO sensor_data (plot_id, temperature, pH, tds, waterLevel)
-            VALUES (i, RAND() * 100, RAND() * 14, RAND() * 1000, RAND() * 100);
+            INSERT INTO sensor_data (plot_id, temperature, pH, tds)
+            VALUES (i, RAND() * 100, RAND() * 14, RAND() * 1000);
             SET j = j + 1;
         END WHILE;
         SET i = i + 1;

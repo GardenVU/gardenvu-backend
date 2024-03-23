@@ -60,7 +60,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     $row['temperature'] = (float)$row['temperature'];
                     $row['pH'] = (float)$row['pH'];
                     $row['tds'] = (float)$row['tds'];
-                    $row['waterLevel'] = (float)$row['waterLevel'];
                     $row['time_collected'] = $row['time_collected'];
                     $sensorData[] = $row;
                 }
